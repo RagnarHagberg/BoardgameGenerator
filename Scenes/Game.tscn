@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://b83yen7r4vypo"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_1xdph"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnysr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yt5ue"]
+bg_color = Color(0.864675, 0.864675, 0.864675, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1xdph")
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 485.0
+offset_top = 459.0
+offset_right = 685.0
+offset_bottom = 609.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vnysr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yt5ue")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yt5ue")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yt5ue")
+text = "Restart"
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="FileDialog" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(1200, 700)
+offset_left = -20.0
+offset_top = -8.0
+offset_right = 1180.0
+offset_bottom = 692.0
+
+[node name="Prompt1" type="Label" parent="FileDialog"]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 18.0
+offset_right = 943.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Select  excel sheet exported as csv."
+
+[node name="FileDialog" type="FileDialog" parent="FileDialog"]
+title = "Open a File"
+position = Vector2i(76, 160)
+size = Vector2i(1000, 400)
+content_scale_mode = 2
+content_scale_aspect = 4
+ok_button_text = "Open"
+dialog_close_on_escape = false
+file_mode = 0
+access = 2
+
+[node name="EnterSavePath" type="ColorRect" parent="."]
+visible = false
+offset_right = 1200.0
+offset_bottom = 800.0
+color = Color(0.987134, 0.856203, 0.856824, 1)
+
+[node name="Continue" type="Button" parent="EnterSavePath"]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 403.0
+offset_right = 704.0
+offset_bottom = 553.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vnysr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yt5ue")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yt5ue")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yt5ue")
+text = "Continue"
+
+[node name="LineEdit" type="LineEdit" parent="EnterSavePath"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 0
+offset_left = 356.0
+offset_top = 226.0
+offset_right = 856.0
+offset_bottom = 326.0
+placeholder_text = "Savepath"
+
+[node name="Prompt2" type="Label" parent="EnterSavePath"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 71.0
+offset_right = 944.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Enter a name to save the images as"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="confirmed" from="FileDialog/FileDialog" to="." method="_on_file_dialog_confirmed"]
+[connection signal="file_selected" from="FileDialog/FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="EnterSavePath/Continue" to="." method="_on_continue_pressed"]
