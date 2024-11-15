@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b83yen7r4vypo"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_1xdph"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_1cgnh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnysr"]
 
@@ -12,7 +12,7 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_1xdph")
+script = ExtResource("1_1cgnh")
 
 [node name="Restart" type="Button" parent="."]
 offset_left = 485.0

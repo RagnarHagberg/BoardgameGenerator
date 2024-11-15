@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://duydgwe6tcnfg"]
 
-[ext_resource type="Script" path="res://scripts/card.gd" id="1_x4vkw"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_5dwht"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbyqv"]
 bg_color = Color(0.310966, 0.650131, 0.767567, 1)
@@ -13,7 +13,7 @@ corner_radius_bottom_left = 20
 offset_right = 577.0
 offset_bottom = 326.0
 color = Color(0.654232, 0.654232, 0.654232, 1)
-script = ExtResource("1_x4vkw")
+script = ExtResource("1_5dwht")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

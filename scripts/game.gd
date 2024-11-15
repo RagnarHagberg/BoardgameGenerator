@@ -5,22 +5,19 @@ extends Node2D
 var information_dictionary = {}
 var example_dict = {}
 
-var card_scene : PackedScene = load("res://card.tscn")
+var card_scene : PackedScene = load("res://Scenes/card.tscn")
 var filepath = ""
 var savepath = ""
 
+
 func read_data():
-	 #var file = File.new()
-	#file.open("res://Data/example.txt", file.READ)
-	#above lines changed as of Godot 4 updated 6/5/2024
 	var file = FileAccess.open(filepath, FileAccess.READ)
 	
 	var headers = file.get_csv_line()
 	
 	for header in headers:
 		information_dictionary[header] = []
-
-	print(headers)
+	
 	while !file.eof_reached():
 		var data_set = Array(file.get_csv_line())
 		var i = 0
@@ -31,10 +28,9 @@ func read_data():
 			information_dictionary[header].append(data_set[i])
 			i += 1
 	file.close()
-	print(information_dictionary)
 
 
-func create_cards():
+func create_and_render_cards():
 	for row in range(information_dictionary["Kategori"].size()):
 		var dictionary_line = {}
 		for key in information_dictionary.keys():
@@ -45,9 +41,9 @@ func create_cards():
 		get_node("Cards").add_child(card_instance)
 		if await render_shot(row):
 			continue
-	
+
+
 func render_shot(number):
-	
 	await RenderingServer.frame_post_draw
 	var image_region = Rect2i(0,0,576,326)
 	var capture = get_viewport().get_texture().get_image().get_region(image_region)
@@ -89,4 +85,4 @@ func _on_continue_pressed() -> void:
 		savepath = get_node("EnterSavePath/LineEdit").text
 		get_node("EnterSavePath").hide()
 		read_data()
-		create_cards()
+		create_and_render_cards()
