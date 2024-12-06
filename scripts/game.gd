@@ -5,7 +5,7 @@ extends Node2D
 var information_dictionary = {}
 var example_dict = {}
 
-var card_scene : PackedScene = load("res://Scenes/card.tscn")
+var card_scene : PackedScene = load("res://Scenes/card_2.tscn")
 var filepath = ""
 var savepath = ""
 
@@ -45,10 +45,10 @@ func create_and_render_cards():
 
 func render_shot(number):
 	await RenderingServer.frame_post_draw
-	var image_region = Rect2i(0,0,576,326)
+	var image_region = Rect2i(0,0,600,390)
 	var capture = get_viewport().get_texture().get_image().get_region(image_region)
 	var _time = Time.get_datetime_string_from_system()
-	var filename = "res://{1}{0}.png".format({"0":number, "1": savepath})
+	var filename = "user://{1}".format({"1": savepath}) + "%03d" % number + ".png"
 	capture.save_png(filename)
 	return true
 	
