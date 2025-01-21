@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c76npe581pt4"
-path="res://.godot/imported/franklinsicon.jpg-f445c8dbeeb96cd4719c8275329185e8.ctex"
+uid="uid://n1v8nckuf21i"
+path="res://.godot/imported/Finished.jpg-097fbaee3179578c4f85b98b540c3474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/franklinsicon.jpg"
-dest_files=["res://.godot/imported/franklinsicon.jpg-f445c8dbeeb96cd4719c8275329185e8.ctex"]
+source_file="res://Assets/Finished.jpg"
+dest_files=["res://.godot/imported/Finished.jpg-097fbaee3179578c4f85b98b540c3474.ctex"]
 
 [params]
 

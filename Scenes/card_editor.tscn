@@ -1,0 +1,228 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlwa5ukj261i3"]
+
+[ext_resource type="Script" path="res://scripts/card_editor.gd" id="1_oybpw"]
+[ext_resource type="Script" path="res://scripts/CardEditorInputController.gd" id="3_tdias"]
+[ext_resource type="PackedScene" uid="uid://ctly0a1qhd4t4" path="res://Scenes/text_input_group.tscn" id="3_wfmro"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ke0i"]
+bg_color = Color(0.0557466, 0.299389, 0.605051, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otk06"]
+bg_color = Color(0.65834, 0.65834, 0.65834, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40hpi"]
+bg_color = Color(0.276939, 0.617573, 0.946251, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xurro"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7eib3"]
+bg_color = Color(0.833216, 0.467925, 0.60538, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jc3s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sthf5"]
+bg_color = Color(0.864675, 0.864675, 0.864675, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1tj1"]
+bg_color = Color(0.380866, 0.632597, 0.792552, 1)
+
+[node name="CardEditor" type="Node2D"]
+script = ExtResource("1_oybpw")
+
+[node name="CardTexture" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ReturnToMainButton" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 100)
+offset_left = 946.0
+offset_top = 414.0
+offset_right = 1111.0
+offset_bottom = 514.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ke0i")
+text = "Gå tillbaka 
+och spara"
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 20)
+offset_left = 43.0
+offset_top = 69.0
+offset_right = 143.0
+offset_bottom = 92.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_otk06")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -24.0
+offset_right = 46.0
+offset_bottom = -1.0
+text = "Musposition"
+
+[node name="OpenChangeMenu" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 100)
+offset_left = 945.0
+offset_top = 537.0
+offset_right = 1109.0
+offset_bottom = 637.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_40hpi")
+text = "Sätt text"
+
+[node name="PopupPanel" type="Window" parent="."]
+position = Vector2i(10, 100)
+size = Vector2i(800, 508)
+visible = false
+wrap_controls = true
+popup_window = true
+min_size = Vector2i(100, 100)
+
+[node name="Panel" type="Panel" parent="PopupPanel"]
+custom_minimum_size = Vector2(700, 500)
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 804.0
+offset_bottom = 704.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xurro")
+script = ExtResource("3_tdias")
+
+[node name="HSlider" type="HSlider" parent="PopupPanel/Panel"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 27.0
+offset_right = 220.0
+offset_bottom = 43.0
+min_value = 1.0
+max_value = 2.0
+value = 1.0
+tick_count = 2
+ticks_on_borders = true
+
+[node name="QuestionSLots" type="Label" parent="PopupPanel/Panel"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 4.0
+offset_right = 148.0
+offset_bottom = 27.0
+text = "Antal frågeplatser"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 71.0
+offset_right = 52.0
+offset_bottom = 271.0
+theme_override_constants/separation = 200
+
+[node name="TextInputGroup" parent="PopupPanel/Panel/VBoxContainer" instance=ExtResource("3_wfmro")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PopupPanel/Panel"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 0
+offset_left = 650.0
+offset_top = 20.0
+offset_right = 750.0
+offset_bottom = 70.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7eib3")
+text = "Save"
+
+[node name="EnterSavePath" type="ColorRect" parent="."]
+visible = false
+offset_right = 1200.0
+offset_bottom = 800.0
+color = Color(0.987134, 0.856203, 0.856824, 1)
+
+[node name="Continue" type="Button" parent="EnterSavePath"]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 403.0
+offset_right = 704.0
+offset_bottom = 553.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2jc3s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sthf5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sthf5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sthf5")
+text = "Continue"
+
+[node name="LineEdit" type="LineEdit" parent="EnterSavePath"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 0
+offset_left = 356.0
+offset_top = 226.0
+offset_right = 856.0
+offset_bottom = 326.0
+placeholder_text = "Savepath"
+
+[node name="Prompt2" type="Label" parent="EnterSavePath"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 68.0
+offset_right = 1031.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Skriv filnamnet som kortdatan ska sparas som"
+
+[node name="SelectPicturePanel" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u1tj1")
+
+[node name="FileDialog" type="FileDialog" parent="SelectPicturePanel"]
+auto_translate_mode = 1
+title = "Välj en bild"
+position = Vector2i(76, 160)
+size = Vector2i(1000, 400)
+content_scale_mode = 2
+content_scale_aspect = 4
+ok_button_text = "Open"
+dialog_close_on_escape = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png", "*.jpg", "*.svg", "*webp", "")
+
+[node name="Label" type="Label" parent="SelectPicturePanel"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 63.0
+offset_right = 785.0
+offset_bottom = 108.0
+theme_override_font_sizes/font_size = 32
+text = "Ladda upp bilden på kortet!"
+
+[connection signal="pressed" from="ReturnToMainButton" to="." method="_on_return_to_main_button_pressed"]
+[connection signal="pressed" from="OpenChangeMenu" to="." method="_on_open_change_menu_pressed"]
+[connection signal="value_changed" from="PopupPanel/Panel/HSlider" to="PopupPanel/Panel" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="PopupPanel/Panel/Button" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="EnterSavePath/Continue" to="." method="_on_continue_pressed"]
+[connection signal="file_selected" from="SelectPicturePanel/FileDialog" to="." method="_on_file_dialog_file_selected"]

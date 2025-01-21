@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b83yen7r4vypo"]
+[gd_scene load_steps=6 format=3 uid="uid://b83yen7r4vypo"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_1cgnh"]
+[ext_resource type="Texture2D" uid="uid://n1v8nckuf21i" path="res://Assets/Finished.jpg" id="2_gaydl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnysr"]
 
@@ -11,20 +12,11 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ada64"]
+bg_color = Color(0.323992, 0.000934699, 0.823492, 1)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_1cgnh")
-
-[node name="Restart" type="Button" parent="."]
-offset_left = 485.0
-offset_top = 459.0
-offset_right = 685.0
-offset_bottom = 609.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_vnysr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yt5ue")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_yt5ue")
-theme_override_styles/normal = SubResource("StyleBoxFlat_yt5ue")
-text = "Restart"
 
 [node name="Cards" type="Node2D" parent="."]
 
@@ -38,13 +30,14 @@ offset_bottom = 692.0
 
 [node name="Prompt1" type="Label" parent="FileDialog"]
 layout_mode = 0
-offset_left = 242.0
-offset_top = 18.0
-offset_right = 943.0
-offset_bottom = 131.0
+offset_left = 176.0
+offset_top = 28.0
+offset_right = 1007.0
+offset_bottom = 141.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "Select  excel sheet exported as csv."
+text = "Välj de exporterade frågorna som csv"
+horizontal_alignment = 1
 
 [node name="FileDialog" type="FileDialog" parent="FileDialog"]
 title = "Open a File"
@@ -56,6 +49,39 @@ ok_button_text = "Open"
 dialog_close_on_escape = false
 file_mode = 0
 access = 2
+
+[node name="FileDialog2" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(1200, 700)
+offset_left = -20.0
+offset_top = -8.0
+offset_right = 1180.0
+offset_bottom = 692.0
+color = Color(1, 0.913725, 1, 1)
+
+[node name="Prompt1" type="Label" parent="FileDialog2"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 28.0
+offset_right = 1018.0
+offset_bottom = 141.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Välj skapad kort data av filtyp .tres"
+horizontal_alignment = 1
+
+[node name="FileDialogCardData" type="FileDialog" parent="FileDialog2"]
+auto_translate_mode = 1
+title = "Open a File"
+position = Vector2i(76, 160)
+size = Vector2i(1000, 400)
+content_scale_mode = 2
+content_scale_aspect = 4
+ok_button_text = "Open"
+dialog_close_on_escape = false
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.tres")
 
 [node name="EnterSavePath" type="ColorRect" parent="."]
 visible = false
@@ -87,15 +113,54 @@ placeholder_text = "Savepath"
 
 [node name="Prompt2" type="Label" parent="EnterSavePath"]
 layout_mode = 0
-offset_left = 243.0
-offset_top = 71.0
-offset_right = 944.0
-offset_bottom = 126.0
+offset_left = 159.0
+offset_top = 69.0
+offset_right = 1022.0
+offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "Enter a name to save the images as"
+text = "Skriv filnamnet som bilderna ska sparas som"
 
-[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[node name="FinishedPanel" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ada64")
+
+[node name="TextureRect" type="TextureRect" parent="FinishedPanel"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = -19.0
+offset_right = 1173.0
+offset_bottom = 285.0
+texture = ExtResource("2_gaydl")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="FinishedPanel"]
+offset_left = -3.0
+offset_top = 289.0
+offset_right = 1149.0
+offset_bottom = 372.0
+theme_override_font_sizes/font_size = 60
+text = "Nu har bilderna sparats!"
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="FinishedPanel"]
+offset_left = 460.0
+offset_top = 412.0
+offset_right = 660.0
+offset_bottom = 562.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vnysr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yt5ue")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yt5ue")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yt5ue")
+text = "Börja om!"
+
 [connection signal="confirmed" from="FileDialog/FileDialog" to="." method="_on_file_dialog_confirmed"]
 [connection signal="file_selected" from="FileDialog/FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="file_selected" from="FileDialog2/FileDialogCardData" to="." method="_on_file_dialog_card_data_file_selected"]
 [connection signal="pressed" from="EnterSavePath/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="FinishedPanel/Restart" to="." method="_on_restart_pressed"]

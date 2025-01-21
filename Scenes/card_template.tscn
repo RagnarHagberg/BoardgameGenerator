@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmw35bqfv6sch"]
+
+[ext_resource type="Texture2D" uid="uid://dt7wyqv66qu3x" path="res://Assets/Spelkort.png" id="1_1bpt4"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_xg4kc"]
+
+[node name="CardTemplate" type="TextureRect"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_1bpt4")
+expand_mode = 3
+stretch_mode = 4
+script = ExtResource("1_xg4kc")

@@ -1,0 +1,535 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctly0a1qhd4t4"]
+
+[ext_resource type="Script" path="res://scripts/text_input_group.gd" id="1_u8oio"]
+
+[node name="TextInputGroup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -552.0
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8oio")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/separation = 80
+
+[node name="2low" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/2low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/2low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/2low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/2low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/2low"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "2p låg"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/2low"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="3low" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/3low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/3low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/3low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/3low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/3low"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "3p låg"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/3low"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="4low" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/4low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/4low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/4low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/4low"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/4low"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "4p låg"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/4low"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="6" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/6"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/6"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/6"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/6"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/6"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "6p"
+horizontal_alignment = 1
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/6"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="4high" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/4high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/4high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/4high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/4high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/4high"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "4p hög"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/4high"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="3high" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/3high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/3high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/3high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/3high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/3high"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "3p hög"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/3high"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="2high" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/2high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/2high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/2high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/2high"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/2high"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "2p hög"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/2high"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="question" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/question"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/question"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/question"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/question"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/question"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "Question"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/question"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[node name="answer" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="px" type="LineEdit" parent="HBoxContainer/answer"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 74.0625
+offset_bottom = 65.0
+placeholder_text = "px"
+
+[node name="py" type="LineEdit" parent="HBoxContainer/answer"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 74.0625
+offset_bottom = 104.0
+placeholder_text = "py"
+
+[node name="width" type="LineEdit" parent="HBoxContainer/answer"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 110.0
+offset_right = 74.0625
+offset_bottom = 141.0
+placeholder_text = "width"
+
+[node name="height" type="LineEdit" parent="HBoxContainer/answer"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 145.0
+offset_right = 74.0625
+offset_bottom = 176.0
+placeholder_text = "height"
+
+[node name="Label" type="Label" parent="HBoxContainer/answer"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 5.0
+offset_right = 63.0
+offset_bottom = 28.0
+text = "Answer"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="HBoxContainer/answer"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 180.0
+offset_right = 75.0
+offset_bottom = 200.0
+color = Color(1, 1, 1, 1)
+edit_alpha = false
+
+[connection signal="text_changed" from="HBoxContainer/2low/px" to="." method="_on_px_text_changed" binds= ["2low"]]
+[connection signal="text_changed" from="HBoxContainer/2low/py" to="." method="_on_py_text_changed" binds= ["2low"]]
+[connection signal="text_changed" from="HBoxContainer/2low/width" to="." method="_on_width_text_changed" binds= ["2low"]]
+[connection signal="text_changed" from="HBoxContainer/2low/height" to="." method="_on_height_text_changed" binds= ["2low"]]
+[connection signal="color_changed" from="HBoxContainer/2low/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["2low"]]
+[connection signal="text_changed" from="HBoxContainer/3low/px" to="." method="_on_px_text_changed" binds= ["3low"]]
+[connection signal="text_changed" from="HBoxContainer/3low/py" to="." method="_on_py_text_changed" binds= ["3low"]]
+[connection signal="text_changed" from="HBoxContainer/3low/width" to="." method="_on_width_text_changed" binds= ["3low"]]
+[connection signal="text_changed" from="HBoxContainer/3low/height" to="." method="_on_height_text_changed" binds= ["3low"]]
+[connection signal="color_changed" from="HBoxContainer/3low/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["3low"]]
+[connection signal="text_changed" from="HBoxContainer/4low/px" to="." method="_on_px_text_changed" binds= ["4low"]]
+[connection signal="text_changed" from="HBoxContainer/4low/py" to="." method="_on_py_text_changed" binds= ["4low"]]
+[connection signal="text_changed" from="HBoxContainer/4low/width" to="." method="_on_width_text_changed" binds= ["4low"]]
+[connection signal="text_changed" from="HBoxContainer/4low/height" to="." method="_on_height_text_changed" binds= ["4low"]]
+[connection signal="color_changed" from="HBoxContainer/4low/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["4low"]]
+[connection signal="text_changed" from="HBoxContainer/6/px" to="." method="_on_px_text_changed" binds= ["6"]]
+[connection signal="text_changed" from="HBoxContainer/6/py" to="." method="_on_py_text_changed" binds= ["6"]]
+[connection signal="text_changed" from="HBoxContainer/6/width" to="." method="_on_width_text_changed" binds= ["6"]]
+[connection signal="text_changed" from="HBoxContainer/6/height" to="." method="_on_height_text_changed" binds= ["6"]]
+[connection signal="color_changed" from="HBoxContainer/6/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["6"]]
+[connection signal="text_changed" from="HBoxContainer/4high/px" to="." method="_on_px_text_changed" binds= ["4high"]]
+[connection signal="text_changed" from="HBoxContainer/4high/py" to="." method="_on_py_text_changed" binds= ["4high"]]
+[connection signal="text_changed" from="HBoxContainer/4high/width" to="." method="_on_width_text_changed" binds= ["4high"]]
+[connection signal="text_changed" from="HBoxContainer/4high/height" to="." method="_on_height_text_changed" binds= ["4high"]]
+[connection signal="color_changed" from="HBoxContainer/4high/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["4high"]]
+[connection signal="text_changed" from="HBoxContainer/3high/px" to="." method="_on_px_text_changed" binds= ["3high"]]
+[connection signal="text_changed" from="HBoxContainer/3high/py" to="." method="_on_py_text_changed" binds= ["3high"]]
+[connection signal="text_changed" from="HBoxContainer/3high/width" to="." method="_on_width_text_changed" binds= ["3high"]]
+[connection signal="text_changed" from="HBoxContainer/3high/height" to="." method="_on_height_text_changed" binds= ["3high"]]
+[connection signal="color_changed" from="HBoxContainer/3high/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["3high"]]
+[connection signal="text_changed" from="HBoxContainer/2high/px" to="." method="_on_px_text_changed" binds= ["2high"]]
+[connection signal="text_changed" from="HBoxContainer/2high/py" to="." method="_on_py_text_changed" binds= ["2high"]]
+[connection signal="text_changed" from="HBoxContainer/2high/width" to="." method="_on_width_text_changed" binds= ["2high"]]
+[connection signal="text_changed" from="HBoxContainer/2high/height" to="." method="_on_height_text_changed" binds= ["2high"]]
+[connection signal="color_changed" from="HBoxContainer/2high/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["2high"]]
+[connection signal="text_changed" from="HBoxContainer/question/px" to="." method="_on_px_text_changed" binds= ["question"]]
+[connection signal="text_changed" from="HBoxContainer/question/py" to="." method="_on_py_text_changed" binds= ["question"]]
+[connection signal="text_changed" from="HBoxContainer/question/width" to="." method="_on_width_text_changed" binds= ["question"]]
+[connection signal="text_changed" from="HBoxContainer/question/height" to="." method="_on_height_text_changed" binds= ["question"]]
+[connection signal="color_changed" from="HBoxContainer/question/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["question"]]
+[connection signal="text_changed" from="HBoxContainer/answer/px" to="." method="_on_px_text_changed" binds= ["answer"]]
+[connection signal="text_changed" from="HBoxContainer/answer/py" to="." method="_on_py_text_changed" binds= ["answer"]]
+[connection signal="text_changed" from="HBoxContainer/answer/width" to="." method="_on_width_text_changed" binds= ["answer"]]
+[connection signal="text_changed" from="HBoxContainer/answer/height" to="." method="_on_height_text_changed" binds= ["answer"]]
+[connection signal="color_changed" from="HBoxContainer/answer/ColorPickerButton" to="." method="_on_color_picker_button_color_changed" binds= ["answer"]]
